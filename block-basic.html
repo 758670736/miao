@@ -6,59 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    div:first-of-type{
-      width: 100%;
-      background-color: red;
-      margin: 20px auto;
+    body{
+      margin: 20px;
     }
-    p.a{
+    div.a{
+      background-color: red;
+      min-width: 600;
+      width: auto;
+    }
+    div.a p{
       width: 600px;
       margin: auto;
     }
-    div.a{
-      border: 2px solid;
-      width: 580px;
-      margin: auto;
-      padding: 0 10px;
-    }
-    p.b{
-      height: 60px;
-      overflow: auto;
-    }
-    p.c{
-      height: 60px;
-      overflow: auto;
-    }
     div.b{
+      box-sizing: border-box;
+      max-width: 600px;
+      margin: 20px auto;
+      border: 2px solid;
+    }
+    div.b p{
+      height: 60px;
+      overflow: auto;
+      margin: 10px ;
+    }
+    .b div{
       height: 50px;
       background-color: rgb(251, 126, 251);
+      margin: 0 10px ;
+    }
+    div.b div:hover{
+      margin: 0;
     }
     div.c{
       width: 0;
       height: 0px;
-      border-top: 70px solid transparent;
-      border-left:  70px solid transparent;
-      border-bottom:  70px solid orange;
-      border-right:  70px solid transparent;
+     border: 70px solid;
+     border-color: transparent transparent orange transparent;
       margin: auto;
     }
   </style>
 </head>
 <body>
-  <div>
-    <p class="a">
+  <div class="a">
+    <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt at, ea natus cupiditate assumenda deserunt ex maxime dignissimos. Soluta laudantium id architecto fugit labore fuga consequatur placeat laboriosam dolorum! Incidunt!
     </p>
   </div>
-  <div class="a">
-    <p class="b">
+
+  <div class="b">
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt! Cupiditate, modi
     </p> 
-    <div class="b"></div>
-    <p class="c">
+    <div></div>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident, quae ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae, dignissimos dolor!
     </p>
   </div>
+
   <div class="c"></div>
 </body>
 </html>
