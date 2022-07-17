@@ -87,12 +87,10 @@
     }
   </style> -->
   <style>
-    html{
+    html, body{
       margin: 0;
     }
-    body{
-      margin: 0;
-    }
+    
     div.a header{
       background-color: black;
     }
@@ -107,14 +105,40 @@
       margin: auto;
       padding: 12px;
     }
-    .a main ul{
+
+    .a .a{
+      width: 600px;
+      margin: 20px auto;
+    }
+    .a .a ul{
+      margin: -8px -15px;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }
+    .a .a ul li{
+      font-size: 16px;
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      box-sizing: border-box;
+      margin: 8px 15px;
+      background-color: pink;
+      text-align: center;
+    }
+    .a .a ul li:hover{
+      background-color: red;
+    }
+
+    .a .b ul{
      padding: 0;
     }
-    .a main{
+    .a .b{
       width: 600px;
       margin: 0 auto;
     }
-    .a ul li{
+    .a .b ul li{
       background-color: pink;
       border: 3px solid;
       box-sizing: border-box;
@@ -124,16 +148,16 @@
       margin-bottom: 15px;
       list-style: none;
     }
-    .a main ul li:nth-child(n+5){
+    .a .b ul li:nth-child(n+5){
       margin-left: 210px;
     }
-    .a main ul li:nth-child(n+9){
+    .a .b ul li:nth-child(n+9){
       margin-left: 420px;
     }
-    .a main ul li:nth-child(4n+5){
+    .a .b ul li:nth-child(4n+5){
      margin-top: -220px;
     }
-    .a main ul li:hover{
+    .a .b ul li:hover{
       background-color: red;
     }
     .b ol li{
@@ -164,7 +188,24 @@
         页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
       </div>
 
-      <main>
+      <main class="a">
+        <ul>
+          <li>宽180高40(包含边框)</li>
+          <li>产品</li>
+          <li>产品</li>
+          <li>水平间隙30px</li>
+          <li>产品</li>
+          <li>产品</li>
+          <li>垂直间隙15px</li>
+          <li>产品</li>
+          <li>产品</li>
+          <li>边框宽度3px</li>
+          <li>产品</li>
+          <li>产品</li>
+        </ul>
+      </main>  
+      <hr>
+      <main class="b">
         <ul>
           <li>宽180高40(包含边框)</li>
           <li>水平间隙30px</li>

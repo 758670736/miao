@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    div{
+      display: inline-block;
+      position: relative;
+    }
+    div ul{
+      border: 1px solid;
+      display: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+    div:hover > ul {
+      display: block;
+    }
+    li:hover, ol:hover{
+      background-color: black;
+      color: white;
+    }
+    div li{
+      width: 250px;
+      padding: 10px 8px;
+      position: relative;
+      white-space: nowrap;
+      list-style: none;
+    }
+    li:hover > ol {
+      display: block;
+    }
+    ol{
+      margin: 0 10px 0 30px;
+      padding: 10px 8px;
+      display: none;
+      background-color: white;
+      color: black;
+    }
+    .hr{
+      border-bottom: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div>文件
+      <ul>
+        <li>新建文本文件</li>
+        <li>新建文件...</li>
+        <li class="hr">新建窗口</li>
+        <li>打开文件...</li>
+        <li>打开文件夹...</li>
+        <li>从文件打开工作区...</li>
+        <li class="hr">打开最近的文件</li>
+        <li>将文件夹添加到工作区...</li>
+        <li>将工作区另存为...</li>
+        <li class="hr">复制工作区</li>
+        <li>保存</li>
+        <li>另存为...</li>
+        <li class="hr">全部保存</li>
+        <li class="hr">共享
+          <ol>Copy vscode.dve Link</ol>
+        </li>
+        <li>自动保存</li>
+        <li class="hr">首选项
+          <ol>设置</ol>
+          <ol>联机服务设置</ol>
+          <ol>遥测设置</ol>
+          <ol class="hr">扩展</ol>
+          <ol>键盘快捷方式</ol>
+          <ol class="hr">从-中迁移键盘快捷方式...</ol>
+          <ol class="hr">配置用户代码片段</ol>
+          <ol>颜色主题</ol>
+          <ol>文件图标主题</ol>
+          <ol class="hr">产品图标主题</ol>
+          <ol>打开设置同步...</ol>
+        </li>
+        <li>还原文件</li>
+        <li>关闭编辑器</li>
+        <li>关闭文件夹</li>
+        <li class="hr">关闭窗口</li>
+        <li>退出</li>
+      </ul>
+  </div>
+
+</body>
+</html>
