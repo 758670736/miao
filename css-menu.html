@@ -25,23 +25,25 @@
     div:hover > ul {
       display: block;
     }
-    li:hover, ol:hover{
+    li:hover{
       background-color: black;
       color: white;
     }
+    /* 所有的菜单项都得成为它子菜单的定位祖先,所以是用div li */
     div li{
       width: 250px;
-      padding: 10px 8px;
+      padding: 10px 15px;
       position: relative;
-      white-space: nowrap;
+      /* 设定文字不择行 */
+      white-space: nowrap;    
       list-style: none;
     }
-    li:hover > ol {
+    li:hover > ul {
       display: block;
     }
-    ol{
-      margin: 0 10px 0 30px;
-      padding: 10px 8px;
+    div ul li ul{
+      left: 100%;
+      top: 0;
       display: none;
       background-color: white;
       color: black;
@@ -54,10 +56,10 @@
 <body>
   <div>文件
       <ul>
-        <li>新建文本文件</li>
+        <li>新建文本文件   Ctrl+N</li>
         <li>新建文件...</li>
         <li class="hr">新建窗口</li>
-        <li>打开文件...</li>
+        <li>打开文件...   Ctrl+O</li>
         <li>打开文件夹...</li>
         <li>从文件打开工作区...</li>
         <li class="hr">打开最近的文件</li>
@@ -68,21 +70,27 @@
         <li>另存为...</li>
         <li class="hr">全部保存</li>
         <li class="hr">共享
-          <ol>Copy vscode.dve Link</ol>
+          <ul>
+            <li>
+              Copy vscode.dve Link
+            </li>
+          </ul>
         </li>
         <li>自动保存</li>
         <li class="hr">首选项
-          <ol>设置</ol>
-          <ol>联机服务设置</ol>
-          <ol>遥测设置</ol>
-          <ol class="hr">扩展</ol>
-          <ol>键盘快捷方式</ol>
-          <ol class="hr">从-中迁移键盘快捷方式...</ol>
-          <ol class="hr">配置用户代码片段</ol>
-          <ol>颜色主题</ol>
-          <ol>文件图标主题</ol>
-          <ol class="hr">产品图标主题</ol>
-          <ol>打开设置同步...</ol>
+          <ul>
+            <li>设置</li>
+            <li>联机服务设置</li>
+            <li>遥测设置</li>
+            <li class="hr">扩展</li>
+            <li>键盘快捷方式</li>
+            <li class="hr">从-中迁移键盘快捷方式...</li>
+            <li class="hr">配置用户代码片段</li>
+            <li>颜色主题</li>
+            <li>文件图标主题</li>
+            <li class="hr">产品图标主题</li>
+            <li>打开设置同步...</li>
+          </ul>
         </li>
         <li>还原文件</li>
         <li>关闭编辑器</li>
@@ -91,6 +99,51 @@
         <li>退出</li>
       </ul>
   </div>
+  <div>菜单
+    <ul>
+      <li>新建文本文件</li>
+      <li>新建文件...</li>
+      <li class="hr">新建窗口</li>
+      <li>打开文件...</li>
+      <li>打开文件夹...</li>
+      <li>从文件打开工作区...</li>
+      <li class="hr">打开最近的文件</li>
+      <li>将文件夹添加到工作区...</li>
+      <li>将工作区另存为...</li>
+      <li class="hr">复制工作区</li>
+      <li>保存</li>
+      <li>另存为...</li>
+      <li class="hr">全部保存</li>
+      <li class="hr">共享
+        <ul>
+          <li>
+            Copy vscode.dve Link
+          </li>
+        </ul>
+      </li>
+      <li>自动保存</li>
+      <li class="hr">首选项
+        <ul>
+          <li>设置</li>
+          <li>联机服务设置</li>
+          <li>遥测设置</li>
+          <li class="hr">扩展</li>
+          <li>键盘快捷方式</li>
+          <li class="hr">从-中迁移键盘快捷方式...</li>
+          <li class="hr">配置用户代码片段</li>
+          <li>颜色主题</li>
+          <li>文件图标主题</li>
+          <li class="hr">产品图标主题</li>
+          <li>打开设置同步...</li>
+        </ul>
+      </li>
+      <li>还原文件</li>
+      <li>关闭编辑器</li>
+      <li>关闭文件夹</li>
+      <li class="hr">关闭窗口</li>
+      <li>退出</li>
+    </ul>
+</div>
 
 </body>
 </html>
