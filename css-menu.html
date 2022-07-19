@@ -31,7 +31,7 @@
     }
     /* 所有的菜单项都得成为它子菜单的定位祖先,所以是用div li */
     div li{
-      width: 250px;
+      width: 280px;
       padding: 10px 15px;
       position: relative;
       /* 设定文字不择行 */
@@ -51,24 +51,27 @@
     .hr{
       border-bottom: 1px solid;
     }
+    span{
+      float: right;
+    }
   </style>
 </head>
 <body>
   <div>文件
       <ul>
-        <li>新建文本文件   Ctrl+N</li>
-        <li>新建文件...</li>
-        <li class="hr">新建窗口</li>
-        <li>打开文件...   Ctrl+O</li>
-        <li>打开文件夹...</li>
+        <li>新建文本文件        <span>Ctrl+N</span></li>
+        <li>新建文件...         <span>Ctrl+Alt+Windows+N</span></li>
+        <li class="hr">新建窗口 <span>Ctrl+Shift+N</span></li>
+        <li>打开文件...         <span>Ctrl+O</span></li>
+        <li>打开文件夹...       <span>Ctrl+O Ctrl+K</span></li>
         <li>从文件打开工作区...</li>
         <li class="hr">打开最近的文件</li>
         <li>将文件夹添加到工作区...</li>
         <li>将工作区另存为...</li>
         <li class="hr">复制工作区</li>
-        <li>保存</li>
-        <li>另存为...</li>
-        <li class="hr">全部保存</li>
+        <li>保存                <span>Ctrl+S</span></li>
+        <li>另存为...           <span>Ctrl+Shift+S</span></li>
+        <li class="hr">全部保存 <span>Ctrl+K S</span></li>
         <li class="hr">共享
           <ul>
             <li>
@@ -77,25 +80,25 @@
           </ul>
         </li>
         <li>自动保存</li>
-        <li class="hr">首选项
+        <li class="hr">首选项      <span>></span>
           <ul>
-            <li>设置</li>
+            <li>设置               <span>Ctrl+,</span></li>
             <li>联机服务设置</li>
             <li>遥测设置</li>
-            <li class="hr">扩展</li>
-            <li>键盘快捷方式</li>
+            <li class="hr">扩展    <span>Ctrl+Shift+X</span></li>
+            <li>键盘快捷方式        <span>Ctrl+K Ctrl+S</span></li>
             <li class="hr">从-中迁移键盘快捷方式...</li>
             <li class="hr">配置用户代码片段</li>
-            <li>颜色主题</li>
+            <li>颜色主题            <span>Ctrl+K Ctrl+T</span></li>
             <li>文件图标主题</li>
             <li class="hr">产品图标主题</li>
             <li>打开设置同步...</li>
           </ul>
         </li>
         <li>还原文件</li>
-        <li>关闭编辑器</li>
-        <li>关闭文件夹</li>
-        <li class="hr">关闭窗口</li>
+        <li>关闭编辑器<span>Ctrl+F4</span></li>
+        <li>关闭文件夹<span>Ctrl+K F</span></li>
+        <li class="hr">关闭窗口<span>Alt+F4</span></li>
         <li>退出</li>
       </ul>
   </div>
