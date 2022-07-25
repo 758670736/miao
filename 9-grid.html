@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .table{
+      width: 300px;
+      height: 300px;
+      border: 5px solid blue;
+      border-spacing: 0px;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      border-spacing: 0px;
+    }
+    .table td{
+      height: 100px;
+      width: 100px;
+      border: 5px solid blue;
+      box-sizing: content-box;
+      text-align: center;
+      line-height: 100px;
+      color: rgb(5 130 5);
+    }
+    td:hover{
+      border-color: red;
+      position: absolute;
+      width: 91.3px;
+      margin-top: -5px;
+      margin-left: -5px;
+    }
+  </style>
+  <style>
+    .grid{
+      width: 300px;
+      height: 300px;
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+      list-style: none;
+    }
+    .grid li{
+      border: 5px solid blue;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 100px;
+      color: rgb(5 130 5);
+      margin-top: -5px;
+      margin-left: -5px;
+    }
+    li:hover{
+      border-color: red;
+      position: relative;
+    }
+  </style>
+  <style>
+    .float{
+      width: 300px;
+      height: 300px;
+    }
+    .float div{
+      width: 100px;
+      height: 100px;
+      border: 5px solid blue;
+      box-sizing: border-box;
+      float: left;
+      margin-top: -5px;
+      margin-left: -5px;
+      line-height: 100px;
+      text-align: center;
+      color: rgb(5 130 5);
+    }
+    .float div:hover{
+      border-color: red;
+      position: relative;
+    }
+  </style>
+  <style>
+    .flex{
+      width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .flex div{
+      width: 100px;
+      height: 100px;
+      border: 5px solid blue;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 100px;
+      margin-top: -5px;
+      margin-left: -5px;
+      color: rgb(5 130 5);
+    }
+    .flex div:hover{
+      border-color: red;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+    <ul class="grid">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
+    <div class="float">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <div class="flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+</body>
+</html>
