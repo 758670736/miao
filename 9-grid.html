@@ -13,7 +13,6 @@
       border-spacing: 0px;
       border-collapse: collapse;
       box-sizing: border-box;
-      border-spacing: 0px;
     }
     .table td{
       height: 100px;
@@ -49,10 +48,11 @@
       color: rgb(5 130 5);
       margin-top: -5px;
       margin-left: -5px;
+      position: relative;
     }
     li:hover{
       border-color: red;
-      position: relative;
+      z-index: 8;
     }
   </style>
   <style>
@@ -71,10 +71,11 @@
       line-height: 100px;
       text-align: center;
       color: rgb(5 130 5);
+      position: relative;
     }
     .float div:hover{
       border-color: red;
-      position: relative;
+      z-index: 8;
     }
   </style>
   <style>
@@ -93,10 +94,11 @@
       margin-top: -5px;
       margin-left: -5px;
       color: rgb(5 130 5);
+      position: relative;
     }
     .flex div:hover{
       border-color: red;
-      position: relative;
+      z-index: 8;
     }
   </style>
 </head>
