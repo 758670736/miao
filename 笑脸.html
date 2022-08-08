@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+    }
+    .one{
+      width: 400px;
+      height: 400px;
+      transition: 1.5s linear;
+      margin: 100px;
+    }
+    .one span{
+      display: inline-block;
+      transition: 1.5s linear;
+    }
+    .one img{
+      width: 100px;
+      height: 100px;
+    }
+    .one:hover{
+      transform: rotate(360deg);
+    }
+    .one:hover span{
+      transform: rotate(-360deg);
+    }
+    .two{
+      width: 400px;
+      height: 400px;
+      transition: 1.5s linear;
+      margin: 100px;
+    }
+    .two img{
+      width: 100px;
+      height: 100px;
+      transition: 1.5s linear;
+    }
+    .two:hover{
+      transform: rotate(360deg);
+    }
+    .two:hover img{
+      transform: rotate(-360deg);
+    } 
+    /* section{
+      width: 20px;
+      height: 20px;
+      margin: 100px auto;
+      --deg: 30deg;
+      transform: rotate(var(--deg)) translate(50px) rotate(calc(-1 * var(--deg)));
+    } */
+  </style>
+</head>
+<body>
+  <div class="one">
+    <span>
+      <img src="https://ts3.cn.mm.bing.net/th?id=OIP-C.nL3miHxCXO5gDqdat-wCKgHaHS&w=252&h=247&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="">
+    </span>
+  </div>
+  <div class="two">
+      <img src="https://ts3.cn.mm.bing.net/th?id=OIP-C.nL3miHxCXO5gDqdat-wCKgHaHS&w=252&h=247&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="">
+  </div>
+  <section>
+
+  </section>
+</body>
+</html>

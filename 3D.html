@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .cube{
+      width: 300px;
+      height: 300px;
+      position: relative;
+      perspective: 500px;
+      perspective-origin: left top;
+      transition: 2s;
+      transform-style: preserve-3d;
+      background-color: gold;
+     }
+     .cube:hover{
+      transform: rotateY(100deg);
+     }
+     .cube div{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      transform: translate(-50%,-50%);
+      transition: 1s;
+     }
+     .surface1{
+      background-color: aqua;
+     }
+     .surface2{
+      background-color: bisque;
+    }
+    .surface3{
+      background-color: black;
+      transform: rotateY(90deg);
+      transform: translate(-50%,-50%);
+    }
+    .surface4{
+      background-color: blue;
+    }
+    .surface5{
+      background-color: brown;
+    }
+    .surface6{
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <section class="cube">
+    <div class="surface1">1</div>
+    <div class="surface2">2</div>
+    <div class="surface3">3</div>
+    <div class="surface4">4</div>
+    <div class="surface5">5</div>
+    <div class="surface6">6</div>
+  </section>
+  
+</body>
+</html>
