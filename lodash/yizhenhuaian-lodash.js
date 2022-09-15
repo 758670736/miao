@@ -1,4 +1,4 @@
-var maohuimin = {
+var yizhenhuaian = {
   add:
     function add(a, b) {
       return a + b
