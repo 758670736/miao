@@ -40,5 +40,21 @@ var maohuimin = {
         array[i] = value
       }
       return array
-    }
+    },
+  flatten:
+    function flatten(array) {
+      return array.reduce((result, item) => {
+        return result = result.concat(item)
+      }, [])
+      return result
+    },
+  flattenDeep:
+    function flattenDeep(array) {
+      return array.reduce((result, item) => {
+        if (Array.isArray(item)) {
+          return result.concat(     flatten(item)     )
+        }
+        return result.concat(item)
+      }, [])
+    },
 }
