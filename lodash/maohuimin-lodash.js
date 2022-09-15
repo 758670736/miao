@@ -19,7 +19,6 @@ var maohuimin = {
     },
   difference:
     function difference(array, val) {
-
     },
   drop:
     function drop(array, n = 1) {
@@ -29,6 +28,20 @@ var maohuimin = {
       var result = []
       for (var i = 0; i < array.length; i++) {
         if (i >= n) {
+          result.push(array[i])
+        }
+      }
+      return result
+    },
+  dropRight:
+    function dropRight(array, n = 1) {
+      if (n > array.length) {
+        return []
+      }
+      var result = []
+      var key = array.length - n - 1
+      for (var i = 0; i < array.length; i++) {
+        if (i <= key) {
           result.push(array[i])
         }
       }
@@ -57,4 +70,28 @@ var maohuimin = {
         return result.concat(item)
       }, [])
     },
+  head:
+    function head(array) {
+      if (!array) {
+        return undefined
+      }
+      return array[0]
+    },
+  indexOf:
+    function indexOf(array, value, fromIndex = 0) {
+      for (var i = fromIndex; i < array.length; i++) {
+        if (array[i] === value) {
+          return i
+        }
+      }
+      return -1
+    },
+  initial:
+    function initial(array) {
+      var result = []
+      for (var i = 0; i < array.length - 1; i++) {
+        result.push(array[i])
+      }
+      return result
+    }
 }
