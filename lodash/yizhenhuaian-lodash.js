@@ -70,6 +70,11 @@ var yizhenhuaian = {
         return result.concat(item)
       }, [])
     },
+  fromPairs:
+    function fromPairs(pairs) {
+      var result = {}
+      
+    },
   head:
     function head(array) {
       if (!array) {
@@ -93,5 +98,40 @@ var yizhenhuaian = {
         result.push(array[i])
       }
       return result
-    }
+    },
+  join:
+    function join(array, separator) {
+      var result = ''
+      for (var i = 0; i < array.length; i++) {
+        result = result + array[i] + separator
+      }
+      return result.slice(0, result.length - 1)
+    },
+  last:
+    function last(array) {
+      if (!array) {
+        return undefined
+      }
+      return array[array.length - 1]
+    },
+  pull:
+    function pull(array,values) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] == values) {
+          array = array.splice(i,1)
+        }
+      }
+      return array
+    },
+  reverse:
+    function reverse(array) {
+      var stop = Math.floor(array.length / 2)
+      for(var i = 0; i < stop; i++) {
+        var j = array.length - i - 1
+        var t = array[j]
+        array[j] = array[i]
+        array[i] = t
+      }
+        return array
+    },
 }
