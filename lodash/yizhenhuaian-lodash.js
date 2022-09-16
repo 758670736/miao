@@ -134,4 +134,86 @@ var yizhenhuaian = {
       }
         return array
     },
+  gt:
+    function gt(value, other) {
+      if (value > other) {
+        return true
+      } else {
+        return false
+      }
+    },
+  gte:
+    function gte(value, other) {
+      if (value >= other) {
+        return true
+      } else {
+        return false
+      }
+    },
+  It:
+    function It(value, other) {
+      if (value < other) {
+        return true
+      } else {
+        return false
+      }
+    },
+  Ite:
+    function Ite(value, other) {
+      if (value <= other) {
+        return true
+      } else {
+        return false
+      }
+    },
+  max:
+    function max(array) {
+      if (!array) {
+        return undefined
+      }
+      var max = array[0]
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+          max = array[i]
+        }
+      }
+      return max
+    },
+  mean:
+    function mean(array) {
+      var sum = 0
+      for (var i = 0; i < array.length; i++) {
+        sum += array[i]
+      }
+      return sum / array.length
+    },
+  min:
+    function min(array) {
+      if (!array) {
+        return undefined
+      }
+      var min = array[0]
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+          min = array[i]
+        }
+      }
+      return min
+    },
+  sum:
+    function sum(array) {
+      var sum = 0
+      for (var i = 0; i < array.length; i++) {
+        sum += array[i]
+      }
+      return sum
+    },
+  inRange:
+    function inRange(number, start = 0, end) {
+      if (number >= start && number < end) {
+        return true
+      } else {
+        return false
+      }
+    },
 }
