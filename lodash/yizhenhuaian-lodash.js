@@ -1,8 +1,4 @@
 var yizhenhuaian = {
-  add:
-    function add(a, b) {
-      return a + b
-    },
   chunk:
     function chunk(array, nums) {
       var result = []
@@ -114,12 +110,31 @@ var yizhenhuaian = {
       }
       return array[array.length - 1]
     },
+  nth:
+    function nth(array, n = 0) {
+      if (n >= 0 && n < array.length) {
+            return array[n]
+        } else if (n < 0 && n >= -array.length) {
+        return array[array.length + n]
+      } else {
+        return undefined
+      }
+    },
   pull:
-    function pull(array,values) {
-      for (var i = 0; i < array.length; i++) {
-        if (array[i] == values) {
-          array = array.splice(i,1)
+    function pull(array, values = []) {
+      for (var i = 0; i < values.length; i++) {
+        for (var j = 0; j < array.length; i++) {
+          if (array[j] == values[i]) {
+            array.splice(j,1)
+          }
         }
+      }
+      return array
+    },
+  pullAt:
+    function pullAt(array, indexes = []) {
+      for (var i = 0; i < array.length; i++) {
+        array.slice(array[indexes], 1)
       }
       return array
     },
@@ -133,6 +148,16 @@ var yizhenhuaian = {
         array[i] = t
       }
         return array
+    },
+  uniq:
+    function uniq(array) {
+      var result = []
+      for (var i = 0; i < array.length; i++) {
+        if (!(array.indexOf(array[i] in result))) {
+          result.push(array[i])
+        }
+      }
+      return result
     },
   gt:
     function gt(value, other) {
@@ -216,4 +241,35 @@ var yizhenhuaian = {
         return false
       }
     },
+  add:
+    function add(a, b) {
+      return a + b
+    },
+  concat:
+    function concat(array, [values]) {
+
+    },
+  flow:
+  function flow(a, b) {
+      var n = a + b
+      function square(n) {
+          return n * n
+    }
+    return square(n)
+  },
+  //源代码push的实现
+  // push:
+  //   a.push = function push(val) {
+  //    this[this.length] = val
+  //    return this.length
+  //  },
+  // map:
+  //   a.map2 = function (mapper) {
+  //     var result = []
+  //     for (var i = 0; i < this.length; i++) {
+  //       result.push(  mapper(this[i])  )
+  //     }
+  //     return result
+  //   }
+  // a.map2( function (it) { return it / this.length})
 }
