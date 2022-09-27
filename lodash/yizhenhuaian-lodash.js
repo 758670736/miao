@@ -118,8 +118,8 @@ var yizhenhuaian = {
       }
       return array[array.length - 1]
     },
-  lastindexOf:
-    function(ary, value, fromIndex = ary.length - 1) {
+  lastIndexOf:
+    function lastIndexOf(ary, value, fromIndex = ary.length - 1) {
       for (var i = fromIndex; i >= 0; i--) {
           if (ary[i] === value) {
               return i
