@@ -73,8 +73,11 @@ var yizhenhuaian = {
     },
   fromPairs:
     function fromPairs(pairs) {
-      var result = {}
-      
+      var map = {}
+      for (var i = 0; i < pairs.length; i++) {
+          map[pairs[i][0]] = pairs[i][1]
+      }
+      return map
     },
   head:
     function head(array) {
@@ -115,6 +118,15 @@ var yizhenhuaian = {
       }
       return array[array.length - 1]
     },
+  lastindexOf:
+    function(ary, value, fromIndex = ary.length - 1) {
+      for (var i = fromIndex; i >= 0; i--) {
+          if (ary[i] === value) {
+              return i
+          }
+      }
+      return -1
+    },
   nth:
     function nth(array, n = 0) {
       if (n >= 0 && n < array.length) {
@@ -146,7 +158,7 @@ var yizhenhuaian = {
     function uniq(array) {
       var result = []
       for (var i = 0; i < array.length; i++) {
-        if (!(array.indexOf(array[i] in result))) {
+        if (!(result.includes(array[i]))){
           result.push(array[i])
         }
       }
