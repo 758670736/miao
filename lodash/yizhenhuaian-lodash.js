@@ -1,7 +1,12 @@
 var yizhenhuaian = {
   chunk:
-    function chunk(array, nums) {
+    function chunk(array, size = 1) {
       var result = []
+      var count = array.length / size
+      for (var i = 0; i < count; i++) {
+          result[i] = array.splice(0, size)
+      }
+      return result
     },
   compact:
     function compact(array) {
@@ -122,21 +127,9 @@ var yizhenhuaian = {
     },
   pull:
     function pull(array, values = []) {
-      for (var i = 0; i < values.length; i++) {
-        for (var j = 0; j < array.length; i++) {
-          if (array[j] == values[i]) {
-            array.splice(j,1)
-          }
-        }
-      }
-      return array
     },
   pullAt:
     function pullAt(array, indexes = []) {
-      for (var i = 0; i < array.length; i++) {
-        array.slice(array[indexes], 1)
-      }
-      return array
     },
   reverse:
     function reverse(array) {
