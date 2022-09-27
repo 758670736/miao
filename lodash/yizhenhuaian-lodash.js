@@ -154,6 +154,16 @@ var yizhenhuaian = {
       }
         return array
     },
+  sortedindex:
+    function sortedindex(array, value) {
+      array.push(value)
+      array.sort(function (a, b) { return a - b })
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] == value) {
+          return i
+        }
+      }
+    },
   uniq:
     function uniq(array) {
       var result = []
